@@ -8,7 +8,7 @@ import { enableAkitaProdMode } from '@datorama/akita';
 
 if (environment.production) {
   enableProdMode();
-  enableAkitaProdMode();
+ // enableAkitaProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)

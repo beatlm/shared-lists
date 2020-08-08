@@ -1,0 +1,6 @@
+<p>table-component</p>
+
+<table mat-table [dataSource]="dataSource">
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let myRowData; columns: displayedColumns"></tr>
+</table>
