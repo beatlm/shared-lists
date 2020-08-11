@@ -24,10 +24,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: bolder;
 }
-.title img{
-    width: fit-content;
-    align-self: center;
-}
 
 table.mat-table{
   width: 100%;
