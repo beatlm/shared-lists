@@ -44,6 +44,6 @@ export class ProductComponent implements OnInit {
   }
   public delete(product) {
     this.service.deleteProduct(product);
-    console.log('Se ha deslizado:' + product);
+    console.log('Se ha eliminado:' + product);
   }
 }
