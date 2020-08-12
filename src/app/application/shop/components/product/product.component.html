@@ -1,7 +1,7 @@
 <div class="main-div">
 <p>{{currentShop.name}}</p>
   <table mat-table [dataSource]="listado"
-    [ngStyle]="currentShop.name=='dia' ? {'background':'rgba(255,177,163,1)'} : currentShop.name=='Carrefour' ? {'background':'rgba(183,222,237,1)'} : currentShop.name=='mercadona' ? {'background': 'rgba(206,235,210,1)'} : {'background-color':'white'}"
+    [ngStyle]="currentShop.name=='Día' ? {'background':'rgba(255,177,163,1)'} : currentShop.name=='Carrefour' ? {'background':'rgba(183,222,237,1)'} : currentShop.name=='Mercadona' ? {'background': 'rgba(206,235,210,1)'} : {'background-color':'white'}"
     class="mat-elevation-z8 center background-shop">
 
     <ng-container matColumnDef="product">
