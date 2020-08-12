@@ -15,8 +15,8 @@ export class AuthService {
     return this.authDataService.login(email, password);
   }
 
-  register(email: string, password: string, displayName: string) {
-    return this.authDataService.register(email, password, displayName);
+  register(email: string, password: string) {
+    return this.authDataService.register(email, password);
   }
 
 }

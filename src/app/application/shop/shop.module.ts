@@ -1,3 +1,4 @@
+import { RegisterComponent } from './components/register/register.component';
 import { ShopComponent } from './components/shop/shop.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShopService } from './state/shop.service';
@@ -11,8 +12,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ProductComponent } from './components/product/product.component';
 import { AuthService } from './../auth/auth.service';
+
+import { MatCardModule } from '@angular/material/card';
+
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+
 @NgModule({
-  declarations: [ShopComponent, ProductComponent, LoginComponent],
+  declarations: [ShopComponent, ProductComponent, LoginComponent, RegisterComponent],
   imports: [
   
     CommonsModule,
@@ -22,6 +33,16 @@ import { AuthService } from './../auth/auth.service';
     ReactiveFormsModule,
     CommonModule,
     AppRoutingModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTableModule,
+    MatInputModule,
+    MatSelectModule,
+    MatOptionModule,
   ],
   providers: [ShopService, AuthService],
 })

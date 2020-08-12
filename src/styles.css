@@ -23,6 +23,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .title{
   font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: bolder;
+  width: fit-content;
+  display: block;
+  margin: auto;
 }
 
 table.mat-table{
