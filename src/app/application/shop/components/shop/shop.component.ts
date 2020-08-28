@@ -30,7 +30,6 @@ export class ShopComponent implements OnInit {
   }
 
   public addShop() {
-    console.log('Añadimos tienda quií');
     this.service.add({
       name: this.formShop.value,
       owner: [],
