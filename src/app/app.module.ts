@@ -1,3 +1,4 @@
+import { AuthGuard } from './application/auth/auth.guard';
 import { MatSortModule } from '@angular/material/sort';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonsModule } from './application/common/commons.module';
@@ -48,6 +49,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     
   ],
   providers: [
+    AuthGuard
   //  {
   //    provide: NG_ENTITY_SERVICE_CONFIG,
   //    useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' },
