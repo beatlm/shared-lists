@@ -57,4 +57,7 @@ export class ShopComponent implements OnInit {
     console.log('Se ha eliminado:' + shopId);
     this.deleteAction = true;
   }
+  public goShopping(){
+    alert("Proximamente");
+  }
 }
