@@ -26,4 +26,7 @@ export class AuthService {
   register(email: string, password: string) {
     return this.authDataService.register(email, password);
   }
+  updateProfile(displayName: string) {
+    return this.authDataService.updateProfile(displayName);
+  }
 }

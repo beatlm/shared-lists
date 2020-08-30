@@ -38,13 +38,15 @@ export class ShopService extends CollectionService<ShopState> {
   //Deletes the product from active shop
   deleteProduct(productName: string) {
     var productsArray = [...this.query.getActive().products];
-  //  var productToDelete = array.find((product) => product.name === productName);
     const ind=productsArray.findIndex((product)=>product.name===productName);
-    //var index = array.indexOf(productToDelete);
     productsArray.splice(ind,1);
     this.update({
       id: this.query.getActiveId(),
       products: productsArray,
     });
+  }
+
+  deleteShop(shopName:string){
+
   }
 }

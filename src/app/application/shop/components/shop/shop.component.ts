@@ -18,6 +18,8 @@ export class ShopComponent implements OnInit {
   displayedColumns: string[] = ['shop'];
   formShop = new FormControl('', [Validators.required]);
 
+  deleteAction = false;
+
   constructor(
     public service: ShopService,
     public query: ShopQuery,
@@ -40,7 +42,19 @@ export class ShopComponent implements OnInit {
   }
 
   public selectShop(id: ID) {
-    this.service.setActive(id);
-    this.router.navigate(['products']);
+    if (this.deleteAction) {
+      //Si lo que se ha pulsado es el botón de eliminar
+      this.deleteAction = false;
+    } else {
+      this.service.setActive(id);
+      this.router.navigate(['products']);
+      console.log('seleccionada +id' + id);
+    }
+  }
+
+  public delete(shopId) {
+    this.service.remove(shopId);
+    console.log('Se ha eliminado:' + shopId);
+    this.deleteAction = true;
   }
 }
