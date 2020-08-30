@@ -16,4 +16,7 @@
   .center{
       display:flex
   }
+  .icon{
+      max-width: 7em;
+  }
  

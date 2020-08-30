@@ -5,7 +5,12 @@
 
     <ng-container matColumnDef="shop">
       <th mat-header-cell> Tienda </th>
-      <td  class="row" mat-cell *matCellDef="let element" (click)="selectShop(element.id)"> {{element.name}}
+      <td class="row" mat-cell *matCellDef="let element" (click)="selectShop(element.id)"> 
+          <img class="icon" *ngIf="element.image;else noImg" src="{{element.image}}">
+
+        <ng-template #noImg>
+          {{element.name}}
+      </ng-template>
         ({{element.products.length}})
         <button mat-icon-button color="primary" (click)="delete(element.id)" class="delete">
           <mat-icon class="right_icon">highlight_off</mat-icon>
