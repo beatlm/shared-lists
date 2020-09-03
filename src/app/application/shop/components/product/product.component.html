@@ -6,7 +6,8 @@
 
     <ng-container matColumnDef="product">
       <th mat-header-cell *matHeaderCellDef> Producto </th>
-      <td class="row" mat-cell *matCellDef="let element"> {{element.name}}
+      <td class="row" mat-cell *matCellDef="let element"> {{element.name}} 
+     <span> {{element?.addedBy}} </span>
         <button mat-icon-button color="primary" (click)="delete(element.name)">
           <mat-icon class="right_icon">highlight_off</mat-icon>
         </button>

@@ -1,3 +1,4 @@
+import { AuthQuery } from './../../../auth/auth.query';
 import { Product, createProduct } from './../../model/product.model';
 import { ShopService } from './../../state/shop.service';
 import { Component, OnInit } from '@angular/core';
@@ -21,7 +22,8 @@ export class ProductComponent implements OnInit {
   constructor(
     private service: ShopService,
     public router: Router,
-    private query: ShopQuery
+    private query: ShopQuery,
+    private authQuery: AuthQuery
   ) {}
 
   ngOnInit() {
@@ -38,7 +40,7 @@ export class ProductComponent implements OnInit {
   }
 
   public addProduct() {
-    const newProduct = createProduct(this.formProduct.value, 'Bea code', 1);
+    const newProduct = createProduct(this.formProduct.value, this.authQuery.displayName, 1);
     this.service.addProduct(newProduct);
     this.formProduct.reset();
   }

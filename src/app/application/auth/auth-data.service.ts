@@ -5,6 +5,7 @@ import { AuthState } from './auth.state';
 
 @Injectable({ providedIn: 'root' })
 @CollectionConfig({ path: 'users' })
+
 export class AuthDataService extends FireAuthService<AuthState> {
   // formatFromFirestore = createProfile;
 

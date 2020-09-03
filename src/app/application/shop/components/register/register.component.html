@@ -26,6 +26,13 @@
             hide ? "visibility" : "visibility_off"
           }}</mat-icon>
     </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Alias" [formControl]="displayName" required />
+      <mat-error *ngIf="displayName.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+
+
     <button class="login-button" mat-raised-button color="primary" (click)="register()">Registrarme</button>
     <a class="register-button" mat-raised-button color="warn" routerLink="">Volver a login</a>
 

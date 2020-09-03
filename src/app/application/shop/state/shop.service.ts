@@ -36,7 +36,7 @@ export class ShopService extends CollectionService<ShopState> {
     });
   }
   //Deletes the product from active shop
-  deleteProduct(productName: string) {
+  deleteProduct(productName: string, shopId?: ID) {
     var productsArray = [...this.query.getActive().products];
     const ind=productsArray.findIndex((product)=>product.name===productName);
     productsArray.splice(ind,1);
@@ -46,7 +46,5 @@ export class ShopService extends CollectionService<ShopState> {
     });
   }
 
-  deleteShop(shopName:string){
 
-  }
 }
