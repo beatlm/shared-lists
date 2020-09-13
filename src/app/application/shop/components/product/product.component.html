@@ -1,13 +1,13 @@
 <div class="main-div">
-<p>{{currentShop.name}}</p>
+  <p>{{currentShop.name}}</p>
   <table mat-table [dataSource]="listado"
     [ngStyle]="currentShop.name=='Día' ? {'background':'rgba(255,177,163,1)'} : currentShop.name=='Carrefour' ? {'background':'rgba(183,222,237,1)'} : currentShop.name=='Mercadona' ? {'background': 'rgba(206,235,210,1)'} : {'background-color':'white'}"
     class="mat-elevation-z8 center background-shop">
 
     <ng-container matColumnDef="product">
       <th mat-header-cell *matHeaderCellDef> Producto </th>
-      <td class="row" mat-cell *matCellDef="let element"> {{element.name}} 
-     <span> {{element?.addedBy}} </span>
+      <td class="row" mat-cell *matCellDef="let element"> {{element.name}}
+        <span> {{element?.addedBy}} </span>
         <button mat-icon-button color="primary" (click)="delete(element.name)">
           <mat-icon class="right_icon">highlight_off</mat-icon>
         </button>
@@ -16,7 +16,7 @@
 
 
     <!--  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>-->
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;" ></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
   <div class="btn">

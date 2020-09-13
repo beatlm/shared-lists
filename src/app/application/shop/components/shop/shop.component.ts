@@ -1,3 +1,4 @@
+import { DialogComponent } from './../../../common/components/dialog/dialog/dialog.component';
 import { ShopService } from '../../state/shop.service';
 import { ShopQuery } from '../../state/shop.query';
 import { Shop } from '../../model/shop.model';
@@ -17,13 +18,14 @@ export class ShopComponent implements OnInit {
 
   displayedColumns: string[] = ['shop'];
   formShop = new FormControl('', [Validators.required]);
-
+  shopId=null;
   deleteAction = false;
 
   constructor(
     public service: ShopService,
     public query: ShopQuery,
-    public router: Router
+    public router: Router,
+  //  public dialog: DialogComponent
   ) {}
 
   ngOnInit() {
@@ -53,11 +55,24 @@ export class ShopComponent implements OnInit {
   }
 
   public delete(shopId) {
+    this.shopId=shopId;
     this.service.remove(shopId);
     console.log('Se ha eliminado:' + shopId);
     this.deleteAction = true;
   }
-  public goShopping(){
-    alert("Proximamente");
+  public goShopping() {
+    alert('Proximamente');
   }
+
+/*  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '250px',
+      data: { shopId: this.shopId },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
+  }*/
 }

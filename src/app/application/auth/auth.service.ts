@@ -11,17 +11,7 @@ export class AuthService extends FireAuthService<AuthState> {
   constructor(store: AuthStore) {
     super(store);
   }
-  register(email: string, password: string, alias: string) {
-    this.signup(email, password).then((res) => {
-      this.signin(email, password).then((res) => {
-       return this.updateProfile(alias);
-      });
-    });
-  }
-
-  updateProfile(displayName: string) {
-    return this.update({ displayName });
-  }
+  
   /* logout(): Promise<void> {
     return this.authDataService.logout();
   }

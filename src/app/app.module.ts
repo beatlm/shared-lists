@@ -22,6 +22,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatOptionModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule, MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -44,7 +45,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     RouterModule,
     AngularFirestoreModule,
     environment.production ? [] : AkitaNgDevtools.forRoot(),
-    AkitaNgRouterStoreModule//.forRoot(),
+    AkitaNgRouterStoreModule,//.forRoot(),
 
     
   ],
