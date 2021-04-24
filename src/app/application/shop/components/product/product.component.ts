@@ -18,6 +18,7 @@ export class ProductComponent implements OnInit {
   currentShop: Shop;
   listado: Observable<Product[]>; //[];
   formProduct = new FormControl('', [Validators.required]);
+  prioridad = new FormControl('');
 
   constructor(
     private service: ShopService,
@@ -40,9 +41,11 @@ export class ProductComponent implements OnInit {
   }
 
   public addProduct() {
-    const newProduct = createProduct(this.formProduct.value, this.authQuery.displayName, 1);
+    //Por defecto la prioridad es 0
+    const newProduct = createProduct(this.formProduct.value, this.authQuery.displayName, 1,this.prioridad.value);
     this.service.addProduct(newProduct);
     this.formProduct.reset();
+    this.prioridad.reset();
   }
   public delete(product) {
     this.service.deleteProduct(product);
